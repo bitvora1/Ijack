@@ -1,0 +1,10 @@
+*.o
+*.exe
+*.sln
+*.out
+*.a
+
+.idea/
+.vscode/
+
+Main
