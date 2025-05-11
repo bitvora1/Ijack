@@ -1,9 +1,9 @@
 
-CXX=g++
+CXX:=g++
 
-TARGET=Main
+TARGET:=Main
 
-DIRS:= src src/Headers/Base/Basecpp
+DIRS:= src src/Headers/Base/Basecpp src/Headers/Character/Charactercpp
 
 SRCS:= $(foreach dir,$(DIRS),$(wildcard $(dir)/*.cpp))
 

@@ -1,10 +1,11 @@
 #include "Headers/Base/Actor.hpp"
+#include "Headers/Character/Character.hpp"
 #include"raylib.h"
 int main(){
 
 	InitWindow(600, 600, "Game Demo");
 
-	Actor a({300,300,0},{20,20,0});
+	Character chr1=Character({300.0f,400.0f,0.0f},{50.0f,50.0f,50.0f},"sprites/zfr.jpg");
 
 
 	float time=GetTime();
@@ -25,13 +26,13 @@ int main(){
         DrawFPS(0,0);
 
 
-        if(IsKeyDown(KEY_W)) a.Move({0.0,-speed,0.0}, deltaTime);
-        if(IsKeyDown(KEY_S)) a.Move({0.0, speed,0.0}, deltaTime);
-        if(IsKeyDown(KEY_A)) a.Move({-speed,0.0,0.0}, deltaTime);
-        if(IsKeyDown(KEY_D)) a.Move({speed,0.0,0.0}, deltaTime);
+        if(IsKeyDown(KEY_W)) chr1.Move({0.0,-speed,0.0}, deltaTime);
+        if(IsKeyDown(KEY_S)) chr1.Move({0.0, speed,0.0}, deltaTime);
+        if(IsKeyDown(KEY_A)) chr1.Move({-speed,0.0,0.0}, deltaTime);
+        if(IsKeyDown(KEY_D)) chr1.Move({speed,0.0,0.0}, deltaTime);
 
-        //Draw The Collider of Object
-        a.DrawCollider((Color){255,0,0,255});
+
+        chr1.DrawCharacter();
 
         EndDrawing();
     }
